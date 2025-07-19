@@ -67,19 +67,19 @@ export default function PaletteCard({ palette, showActions = true, onLoad }: Pal
             style={{ backgroundColor: color.hex }}
             onClick={(e) => handleColorCopy(color.hex, e)}
             title={`Click to copy: ${color.hex}`}
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
-            {copiedColor === color.hex ? (
-              <div className="bg-white bg-opacity-90 rounded-full p-2 transform scale-110 transition-transform duration-200">
-                <Check className="w-4 h-4 text-green-500" />
-              </div>
-            ) : (
-              <div className="bg-white bg-opacity-0 group-hover:bg-opacity-90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <Copy className="w-4 h-4 text-gray-700" />
-              </div>
-            )}
+          >
+            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+              {copiedColor === color.hex ? (
+                <div className="bg-white bg-opacity-90 rounded-full p-2 transform scale-110 transition-transform duration-200">
+                  <Check className="w-4 h-4 text-green-500" />
+                </div>
+              ) : (
+                <div className="bg-white bg-opacity-0 group-hover:bg-opacity-90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <Copy className="w-4 h-4 text-gray-700" />
+                </div>
+              )}
+            </div>
           </div>
-        </div>
         ))}
       </div>
 
